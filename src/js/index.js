@@ -12,12 +12,16 @@ personagens.forEach((personagem) => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
     removerSelecaoDoPersonagem();
-    personagem.classList.add("selecionado");
+    adicionaClessSelecionado(personagem);
     alterarImagemPersonagemSelecionado(personagem);
     alterarNomePersonagemSelecionado(personagem);
     alterarDescricaoPersonagem(personagem);
   });
 });
+
+function adicionaClessSelecionado(personagem) {
+  personagem.classList.add("selecionado");
+}
 
 function alterarDescricaoPersonagem(personagem) {
   const descricaoPersonagem = document.getElementById("descricao-personagem");
